@@ -1,14 +1,10 @@
 const User = require('./models/User')
-const Post = require('./models/Post')
-const ChatMessage = require('./models/ChatMessage')
 const ActiveUsers = require('./models/ActiveUsers')
 const { getUser } = require('./contextUtils')
 
 module.exports = async ({ req, connection }) => {
     const models = {
         User,
-        Post,
-        ChatMessage,
         ActiveUsers
     }
     if (connection && connection.context) {

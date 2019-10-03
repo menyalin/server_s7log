@@ -12,7 +12,8 @@ const context = require('./context')
 mongoose
     .connect(process.env.MONGO_URI, {
         useNewUrlParser: true,
-        useCreateIndex: true
+        useCreateIndex: true,
+        useFindAndModify: false
     })
     .then(() => console.log('db connected'))
     .catch(err => console.log('error connction db', err.message))
